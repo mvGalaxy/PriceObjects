@@ -76,7 +76,7 @@ namespace PriceObjects
             IsIdentified = identified;
             double id = 0;
             var previous = GetPreviousPrice();
-            if (IsIdentified && (previous.Id == 0))
+            if (IsIdentified && (previous.Id == 0) || (previous!=null &&previous.IsIdentified==false && (previous.Id > 0)))
                 Id = Index;
             else if (IsIdentified && (previous.Id > 0))
                 Id = previous.Id;

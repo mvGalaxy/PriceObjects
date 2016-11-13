@@ -82,7 +82,7 @@ namespace PriceObjects
         {
             if (trades != null)
             {
-                this.Trades = trades;
+                this.Trades = trades.Where(t=>t.SecurityPriceData.Id!=0);
 
                 var groupedTrades=this.Trades.GroupBy(t => t.SecurityPriceData.Id);
 
