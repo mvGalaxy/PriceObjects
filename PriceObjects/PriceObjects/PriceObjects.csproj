@@ -73,12 +73,14 @@
     <Compile Include="Interfaces\ITradeIdentifier.cs" />
     <Compile Include="MarketPrice.cs" />
     <Compile Include="MarketPrices.cs" />
+    <Compile Include="TradeStrategies\MeanReversionStrategy.cs" />
     <Compile Include="TradeStrategies\PriceIsBelow15DayAverage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityPriceClasses\SecurityPrice.cs" />
     <Compile Include="SecurityPriceClasses\SecurityPriceData.cs" />
     <Compile Include="SecurityPriceClasses\SecurityPrices.cs" />
     <Compile Include="CalculatorTypes\StatisticCalculator.cs" />
+    <Compile Include="TradeStrategies\PriceLocationOnChart.cs" />
     <Compile Include="TradeStrategies\StrategyExecutive.cs" />
     <Compile Include="TradeStrategies\TradeIdentifier.cs" />
     <Compile Include="TradeStrategies\TradeIdentifierStrategy.cs" />
@@ -88,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="PriceObjects.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

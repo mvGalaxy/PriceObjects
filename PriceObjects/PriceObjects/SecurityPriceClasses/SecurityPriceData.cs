@@ -9,7 +9,7 @@ namespace PriceObjects
                 
         }
 
-        public double Id { get; set; }
+        public int Id { get; set; }
         public int Index { get; }
         public bool IsIdentified { get; set; }
         public double Price { get; }
@@ -28,7 +28,7 @@ namespace PriceObjects
         }
 
 
-        public SecurityPriceData(double id, int index, double price, DateTime priceDate, bool isIdentified)
+        public SecurityPriceData(int id, int index, double price, DateTime priceDate, bool isIdentified)
         {
             this.Id = id;
             this.Index = index;

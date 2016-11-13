@@ -4,7 +4,7 @@ namespace PriceObjects
 {
     public interface ISecurityPrice
     {
-        double Id { get; set; }
+        int Id { get; set; }
         int Index { get; }
         bool IsIdentified { get; set; }
         double Price { get; }

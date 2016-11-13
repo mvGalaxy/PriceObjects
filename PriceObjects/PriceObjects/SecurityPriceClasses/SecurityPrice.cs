@@ -13,7 +13,7 @@ namespace PriceObjects
         public int Index { get; }
 
         public bool IsIdentified { get; set; }
-        public double Id { get; set; }
+        public int Id { get; set; }
         
         public ITradeIdentifier TradeIdentifier { get; set; }
        // public TradeIdentifier  TradeStrategyIdentifier {get;set;}
@@ -52,7 +52,12 @@ namespace PriceObjects
                         var price = prices[i - 1].GetPreviousPrice();
                         prices.Add(price);
                     }
+                var c = prices.Count;
+                if (c > 1)
+                { prices.RemoveAt(c - 1); }
                 prices.Reverse();
+                
+                //remove the last price so that periods actually equal count of items. we are including current item in collection so we remove the last.
                 foreach (var sprice in prices)
                 {
                     security_prices.Add(sprice);
